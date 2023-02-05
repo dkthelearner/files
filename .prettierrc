@@ -1,16 +1,12 @@
 {
-  "singleQuote": true,
-  "trailingComma": "all",
-  "useTabs": false,
-  "tabWidth": 2,
-  "overrides": [
-    {
-      "files": "*.yml",
-      "options": {
-        "tadWidth": 2,
-        "printWidth": 40,
-        "singleQuote": true
-      }
-    }
-  ]
+    "printWidth": 120,
+    "tabWidth": 4,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "quoteProps": "as-needed",
+    "jsxSingleQuote": false,
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "arrowParens": "always"
 }

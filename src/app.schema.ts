@@ -5,26 +5,26 @@ export type FileDocument = HydratedDocument<File>;
 
 @Schema()
 export class File {
-  @Prop()
-  name: string;
+    @Prop()
+    name: string;
 
-  @Prop()
-  user_id: number;
+    @Prop()
+    user_id: number;
 
-  @Prop()
-  key: string;
+    @Prop()
+    key: string;
 
-  @Prop({ default: now() })
-  created_at: Date;
+    @Prop({ default: now() })
+    created_at: Date;
 
-  @Prop({ default: now() })
-  updated_at: Date;
+    @Prop({ default: now() })
+    updated_at: Date;
 
-  @Prop()
-  deleted_at?: Date;
+    @Prop()
+    deleted_at?: Date;
 
-  @Prop()
-  is_deleted?: boolean;
+    @Prop()
+    is_deleted?: boolean;
 }
 
 export const FileSchema = SchemaFactory.createForClass(File);

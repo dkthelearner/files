@@ -7,18 +7,18 @@ import { JwtAuthGuard, RolesGuard } from './core/guards';
 @UseGuards(JwtAuthGuard)
 @UseGuards(RolesGuard)
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+    constructor(private readonly appService: AppService) {}
 
-  @Get('/presign')
-  getUserProfilePresign(
-    @CurrentUser() authUserId: number,
-    @Query() params: { name: string; type: string },
-  ): Promise<{ url: string; id: string }> {
-    return this.appService.getPresginPutObject(params, authUserId);
-  }
+    @Get('/presign')
+    getUserProfilePresign(
+        @CurrentUser() authUserId: number,
+        @Query() params: { name: string; type: string },
+    ): Promise<{ url: string; id: string }> {
+        return this.appService.getPresginPutObject(params, authUserId);
+    }
 
-  @Get(':id')
-  getFilePresign(@Param() params): Promise<{ url: string }> {
-    return this.appService.getPresignGetObject(params.id);
-  }
+    @Get(':id')
+    getFilePresign(@Param() params): Promise<{ url: string }> {
+        return this.appService.getPresignGetObject(params.id);
+    }
 }
